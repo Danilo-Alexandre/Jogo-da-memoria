@@ -1,0 +1,181 @@
+header{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+body{
+    background-color: burlywood;
+}
+
+p{
+    margin: unset
+}
+
+#board{
+    margin: auto;
+    max-width: 850px;
+    max-height: 700px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    perspective: 800px;
+
+}
+
+.square{
+    
+    margin: 15px;
+    background-color: burlywood;
+    height: 8rem;
+    width: 7.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.541);
+    transform-style: preserve-3d;
+    transition: all  1.5s cubic-bezier(0.175, 0.885, 0.32 ,1.275);
+   
+    
+   
+    
+}
+img{
+    height: 100px;
+}
+.turn{
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+
+.frontCard {
+    position: absolute;
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+.backCard{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+    filter: invert(100%);
+    pointer-events: none;
+    backface-visibility:hidden ;
+    
+}
+
+
+#inicialize{ 
+    background-image: url(./assets/SailorJerry-Wallpapers-PANTHER-US-laptop.jpg);
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 127vh;
+    font-size: 5rem;
+    display: flex;  
+    justify-content: center; 
+    align-content:flex-end;
+    flex-direction: column;
+    flex-wrap:wrap;
+    color: white;
+   
+
+}
+
+
+.game{
+    max-width: 300px;
+    margin-right: 70px;
+    display: none;
+}
+
+.btn-destiny{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 6vw;
+    gap: 30px;
+}
+
+
+.btn{
+    
+    cursor: pointer;
+    padding: 15px 30;
+    height: 80px;
+    width: 250px;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 20px;
+    font-size: 40px;
+    transition: background-color, color, 0.5s ;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.541);
+    
+    
+}
+
+.btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    
+    
+}
+
+
+
+#gameOver, #win{
+    background-color: rgba(0, 0, 0, 0.945);
+    float: inline-start;
+    position: absolute;
+    top: -150px;
+    left: 0px;
+    width: 100%;
+    height: 150%;
+    font-size: 5rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    
+}
+#restart, #winner{
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 80px;
+    border: none;
+    background-color: burlywood;
+    border-radius: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+a{
+    margin-top: 20px;
+    text-decoration: none;
+    color: black;
+    height: 50px;
+    cursor: default;
+}
+
+/* @media screen and (max-width: 1600px) {
+
+    #inicialize{
+        background-size: 300%;
+        background-position:right;
+
+    }
+    
+    .game{
+       display:block;
+    }
+} */
+
+
